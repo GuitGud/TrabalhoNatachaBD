@@ -7,7 +7,7 @@ public class Contrato {
     private Date dataInicio;
     private Date dataFim;
     private double valorMensal;
-    private int idCliente;
+    private int idCliente; // FK
 
     public Contrato() {}
 
@@ -19,18 +19,50 @@ public class Contrato {
         this.idCliente = idCliente;
     }
 
-    public int getIdContrato() { return idContrato; }
-    public void setIdContrato(int idContrato) { this.idContrato = idContrato; }
+    // Getters e Setters
+    public int getIdContrato() {
+        return idContrato;
+    }
 
-    public Date getDataInicio() { return dataInicio; }
-    public void setDataInicio(Date dataInicio) { this.dataInicio = dataInicio; }
+    public void setIdContrato(int idContrato) {
+        this.idContrato = idContrato;
+    }
 
-    public Date getDataFim() { return dataFim; }
-    public void setDataFim(Date dataFim) { this.dataFim = dataFim; }
+    public Date getDataInicio() {
+        return dataInicio;
+    }
 
-    public double getValorMensal() { return valorMensal; }
-    public void setValorMensal(double valorMensal) { this.valorMensal = valorMensal; }
+    public void setDataInicio(Date dataInicio) {
+        this.dataInicio = dataInicio;
+    }
 
-    public int getIdCliente() { return idCliente; }
-    public void setIdCliente(int idCliente) { this.idCliente = idCliente; }
+    public Date getDataFim() {
+        return dataFim;
+    }
+
+    public void setDataFim(Date dataFim) {
+        this.dataFim = dataFim;
+    }
+
+    public double getValorMensal() {
+        return valorMensal;
+    }
+
+    public void setValorMensal(double valorMensal) {
+        this.valorMensal = valorMensal;
+    }
+
+    public int getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
+    }
+
+    @Override
+    public String toString() {
+        return idContrato + " | " + dataInicio + " - " + dataFim +
+               " | R$" + valorMensal + " | Cliente ID: " + idCliente;
+    }
 }

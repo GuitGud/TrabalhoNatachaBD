@@ -5,20 +5,41 @@ public class Cliente {
     private String nome;
     private String cidade;
 
-    // construtores, getters e setters
     public Cliente() {}
-    public Cliente(int id, String nome, String cidade) {
-        this.idCliente = id;
+
+    public Cliente(int idCliente, String nome, String cidade) {
+        this.idCliente = idCliente;
         this.nome = nome;
         this.cidade = cidade;
     }
 
-    public int getIdCliente() { return idCliente; }
-    public void setIdCliente(int id) { this.idCliente = id; }
+    // Getters e Setters
+    public int getIdCliente() {
+        return idCliente;
+    }
 
-    public String getNome() { return nome; }
-    public void setNome(String nome) { this.nome = nome; }
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
+    }
 
-    public String getCidade() { return cidade; }
-    public void setCidade(String cidade) { this.cidade = cidade; }
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    @Override
+    public String toString() {
+        return idCliente + " - " + nome + " - " + cidade;
+    }
 }
